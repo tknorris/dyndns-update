@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  dyndns-update:
+    container_name: dyndns-update
+    restart: unless-stopped
+    image: tknorris/dyndns-updater
+    env_file: updater.env

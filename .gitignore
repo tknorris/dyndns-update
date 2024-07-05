@@ -1,2 +1,4 @@
-duckdns.cfg
+*.cfg
+!*_example.cfg
 lastip
+updater.env
