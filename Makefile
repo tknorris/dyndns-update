@@ -28,10 +28,10 @@ push-version:
 	docker push $(IMAGE_TAG)
 
 run:
-	docker run -it -p 8000:8000 --env-file ./updater.env --rm $(IMAGE_LATEST)
+	docker run -it -p 8000:8000 --env-file ./updater.env --rm -v ${PWD}:/config:ro $(IMAGE_LATEST)
 
 run_bash:
-	docker run -it -p 8000:8000 --env-file ./updater.env --rm $(IMAGE_LATEST) bash
+	docker run -it -p 8000:8000 --env-file ./updater.env --rm -v ${PWD}:/config:ro $(IMAGE_LATEST) bash
 
 version:
 	@echo $(GIT_REVISION)

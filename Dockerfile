@@ -6,5 +6,5 @@ RUN (apt-get update | :) \
 WORKDIR $WORKDIR
 COPY ./requirements.txt $WORKDIR/requirements.txt
 RUN pip install --no-cache-dir --upgrade -r $WORKDIR/requirements.txt
-COPY *.py $WORKDIR/app/
+COPY *.py *.json $WORKDIR/app/
 CMD ["python", "./app/dyndns_upd_ip.py"]

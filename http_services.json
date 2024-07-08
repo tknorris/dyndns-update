@@ -1,0 +1,15 @@
+[
+    {"url": "ipecho.net/plain"},
+    {"url": "ipv4.icanhazip.com"},
+    {"url": "whatismyip.akamai.com"},
+    {"url": "v4.ident.me"},
+    {"url": "ipinfo.io/ip"},
+    {"url": "www.trackip.net/ip"},
+    {"url": "ip.tyk.nu"},
+    {"url": "api.ipify.org"},
+    {"url": "myexternalip.com/raw"},
+    {"url": "wgetip.com"},
+    {"url": "http://checkip.dyndns.org", "re": "IP Address:\\s+(?P<ip>[\\d.]+)"},
+    {"url": "http://ip-api.com/line", "re": "success.*?(?P<ip>\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})"},
+    {"url": "myip.dnsomatic.com"}
+]

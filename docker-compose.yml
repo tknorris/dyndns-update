@@ -5,3 +5,5 @@ services:
     restart: unless-stopped
     image: tknorris/dyndns-updater
     env_file: updater.env
+    volumes:
+      - /Users/tknorris/workspace/dyndns-update:/config
