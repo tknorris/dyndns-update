@@ -19,7 +19,7 @@ USER_AGENT = os.environ.get("USER_AGENT")
 def http_get(url, headers=None, auth=None):
     if headers is None: headers = {}  # noqa: E701
 
-    if USER_AGENT is not None: 
+    if USER_AGENT is not None:
         headers.update({"User-Agent": USER_AGENT})
 
     try:
@@ -62,7 +62,7 @@ def http_method(service):
                     logging.warning(f"Missing 'ip' group from match: {reg_exp}")
                     ip = ""
         else:
-            m = re.match("(?P<ip>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})", res.text)
+            m = re.match("(?P<ip>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})", res.text)  # noqa: W605
             if m is not None:
                 ip = m.group("ip")
             else:
