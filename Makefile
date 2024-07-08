@@ -13,10 +13,10 @@ latest: build staging
 staging: tag-version push-version push
 
 build:
-	docker build -t $(IMAGE_LATEST) .
+	docker build --platform linux/amd64 -t $(IMAGE_LATEST) .
 
 build-nc:
-	docker build --no-cache -t $(IMAGE_LATEST) .
+	docker build --platform linux/amd64 --no-cache -t $(IMAGE_LATEST) .
 
 tag-version:
 	docker tag $(IMAGE_LATEST) $(IMAGE_TAG)
