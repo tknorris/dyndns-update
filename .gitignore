@@ -1,4 +1,3 @@
-*.cfg
-!*_example.cfg
-lastip
+__pycache__/
 updater.env
+lastip
