@@ -1,4 +1,4 @@
-FROM python:3.11.9-slim
+FROM python:3-slim
 ENV WORKDIR=/code
 RUN (apt-get update | :) \
     && apt-get -y install bind9-dnsutils
